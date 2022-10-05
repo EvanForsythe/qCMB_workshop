@@ -1,0 +1,3 @@
+Code and data for the workshop can be found at:
+
+https://github.com/EvanForsythe/qCMB_workshop

@@ -63,8 +63,6 @@ seq_file_list<-list.files(path = seq_dir, pattern = "fasta")
 #random number
 n<-sample(size = 1, x = 1:length(seq_file_list))
 
-#n<-6
-
 #Store the path to the unaligned sequence file
 #paste0 concatenates two strings into one long string and stores this as an object
 seqs_path<-paste0(seq_dir, seq_file_list[n])
