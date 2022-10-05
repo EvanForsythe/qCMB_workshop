@@ -10,4 +10,4 @@ Our workflow consists of the following steps:
 	* *Multiple sequence alignment*
 	* *Phylogenetic tree inference*
 	* *Domain prediction (web-based, outside of R)*
-	* *Generate a ggtree plot that combines the tree on the domain data*
+	* *Generate a ggtree plot that combines the tree and the domain data*
