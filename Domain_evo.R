@@ -152,7 +152,7 @@ names(domain_df)[1]<-"Newick_label"
 seqs2<-seqinr::read.fasta(file = seqs_path, seqtype = "AA")
 
 #Create a df of sequence lengths and join it to the domain data
-domain_dat_full<-right_join(domain_df, data.frame(Newick_label=names(seqs2), Seq_ln=getLength(seqs2)))
+domain_dat_full<-right_join(domain_df, data.frame(Newick_label=names(seqs2), Seq_ln=getLength(seqs2)), by = "Newick_label")
 
 #Change the classes in the dataframe
 domain_dat_full[,1]<-paste(domain_dat_full[,1])

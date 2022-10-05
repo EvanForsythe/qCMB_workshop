@@ -126,6 +126,8 @@ for(t in 1:length(tree$tip.label)){
 #Note: usually you would have a pre-defined outgroup but in this case we'll make our best guess based on branch lengths
 root_tree<-midpoint.root(tree)
 
+plot.phylo(root_tree)
+
 #Write the tree to a text file (newick format)
 write.tree(root_tree, file = paste0("output_files/tree_",seq_file_list[n]))
 
@@ -143,7 +145,7 @@ write.tree(root_tree, file = paste0("output_files/tree_",seq_file_list[n]))
 #Replace the spaces within column headers
 
 #Read the tsv file into R
-domain_df<-read.table(file = "output_files/OG0002537_domains.txt", header = TRUE, sep = "\t")
+domain_df<-read.table(file = "output_files/temp_domains.txt", header = TRUE, sep = "\t")
 
 #Clean up this dataframe a bit
 names(domain_df)[1]<-"Newick_label"
@@ -153,7 +155,7 @@ names(domain_df)[1]<-"Newick_label"
 seqs2<-seqinr::read.fasta(file = seqs_path, seqtype = "AA")
 
 #Create a df of sequence lengths and join it to the domain data
-domain_dat_full<-right_join(domain_df, data.frame(Newick_label=names(seqs2), Seq_ln=getLength(seqs2)))
+domain_dat_full<-right_join(domain_df, data.frame(Newick_label=names(seqs2), Seq_ln=getLength(seqs2)), by = "Newick_label")
 
 #Change the classes in the dataframe
 domain_dat_full[,1]<-paste(domain_dat_full[,1])
