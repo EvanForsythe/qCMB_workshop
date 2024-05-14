@@ -22,7 +22,7 @@ if (!requireNamespace("treeio", quietly = TRUE)){
 library(treeio)
 
 #Install and load ggtree if it isn't already
-if (!requireNamespace("treeio", quietly = TRUE)){
+if (!requireNamespace("ggtree", quietly = TRUE)){
   BiocManager::install("ggtree")
 }
 library(ggtree)
