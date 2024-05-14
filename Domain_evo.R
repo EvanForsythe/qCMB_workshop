@@ -3,7 +3,7 @@
 
 ###Set the working directory (typically the directory where this script is stored)
 #Add the full path to your desired working directory to the quotes
-setwd("<the full path to the directory this scipt lives>")
+setwd("<the full path to the directory in which this scipt lives>")
 
 ###Install the R packages needed for our analysis
 
